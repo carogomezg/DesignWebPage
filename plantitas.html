@@ -1,0 +1,270 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Plantitas</title>
+
+        <script src="jquery-3.6.0.min.js"></script>
+
+        <style type="text/css">
+        
+        /* cambiar el color de fondo a la barra */
+        nav.navbar {
+        background-color: #edf4c3;
+ 
+        }
+
+        .nav-link{
+            color: #307365;
+            font-size: 20px;
+            font-family: "Latin Modern Roman 10";
+            font-style: oblique;
+        }
+
+        .nav-link:hover{
+            color: #9CADA8;
+        }
+
+        #boton-login{
+            background-color: #be97a9;
+            color: #f8eadc;
+            border: #be97a9;
+            
+        }
+
+        #boton-login:hover{
+            background-color: #BAB0A5;
+            color: #f8eadc;
+            
+        }
+
+        #suscribirse{
+            border: 0px;
+        }
+
+        #suscripcion{
+            margin: 0 auto;
+            width:45% 
+        }
+
+        #boton-susc{
+            background-color: #a2b166;
+            color: #f8eadc;
+            border: #be97a9;
+            font-weight: bold;
+            
+        }
+
+        #boton-susc:hover{
+            background-color: #C5D287;
+            color: #f8eadc;
+            
+        }
+
+        .textox{
+            text-align: center;
+        }
+
+        h7{
+            color: #bd98a9;
+            font-weight: bold;
+        }
+
+        .card-header{
+            font-size: 25px;
+            color: #76964c;
+            font-family: "Latin Modern Roman 10";
+            font-style: oblique;
+            background-color: #dfeba0;
+        }
+
+        .border-primary {
+        
+        border-color: #bd98a9!important;
+        
+        }
+
+        #precio{
+          color: #bea9a1;
+          font-weight: bold;
+        }
+
+        #span-email{
+          background-color: white;
+          border: 0px;
+        }
+
+        #descarga{
+          font-size: 25px;
+          color: white;
+          font-weight: bold;
+        }
+
+       
+        
+        </style>
+
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-default">
+            <!--Permite colocar el logotipo/marca de una empresa -->
+            <a class="navbar-brand" href="#">
+                <img src="logotipo2.PNG" width="70" height="70" class="d-inline-block align-top" alt="">
+              </a>
+            <!--Permite mostrar la barra contraída o colapsada -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <!--Se define el menú colapsable -->
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!--Elementos de la barra de navegación forman parte de una lista desordenada -->
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#acerca-de">Acerca de</a>
+                  </li>
+                
+                  <li class="nav-item">
+                    <a class="nav-link" href="#footer">Descargar app</a>
+                  </li>
+                </ul>
+                <!--Formulario login-->
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="email" placeholder="Email" aria-label="Search">
+                  <input class="form-control mr-sm-2" type="password" placeholder="Contraseña" aria-label="Search">
+                  <button id="boton-login" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+                </form>
+              </div>
+            </nav>
+        
+          
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+        <!-- jumbotron with background image -->
+        <div class="p-5 text-center bg-image"
+        style="background-image: url('plantabien.jpg'); height: 400px;">
+        <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+        <h1 class="mb-4">¡Encuentra las más hermosas plantitas!</h1>
+        <h4 class="mb-4">Plantitas de la mejor calidad ♥ </h4>
+        <h6 class="mb-4">¿Deseas conocer más? ¡Suscribete! </h5>
+
+            <form id="suscripcion" class="form-inline my-2 my-lg-0">
+
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span id="span-email" class="input-group-text" id="basic-addon1">@</span>
+                  </div>
+                  <input id="suscribirse" class="form-control mr-sm-2" type="email" placeholder="Email" aria-label="Search">   
+                  <button id="boton-susc" class="btn btn-outline-success my-2 my-sm-0" type="submit">Suscribirse</button>
+                </div>
+
+              </form>
+
+      </div>
+    </div>
+  </div>
+        <br><br>
+        <div class="textox">
+        <h7 name="acerca-de" id="acerca-de" class="display-4">¿Por qué elegir nuestra app?</h7>
+        <br><br>
+        <p class="lead">Nuestra aplicación te brinda la manera más fácil y rápida para comprar las plantitas que deseas. </p>
+        </div>
+        <br>
+
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-6 col-sm-4">
+                <div class="card border-primary">
+                <img
+                src="planta1.jpg"
+                class="card-img-top"
+                alt="..."
+                />
+                  <div class="card-header">Bromelia</div>
+                  <form>
+                    <div class="col-auto">
+                      <div class="input-group mb-2">
+                        <br>
+                        <p class="lead">Plantita muy bonita de color blanco con maceta azul cielo.</p>
+                        <a id="precio" data-toggle="tooltip" title="$300">Ver precio</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="col-6 col-sm-4">
+                <div class="card border-primary">
+                <img
+                src="planta2.jpg"
+                class="card-img-top"
+                alt="..."
+                />
+                  <div class="card-header">Cyperus</div>
+                  <form>
+                    <div class="col-auto">
+                      <div class="input-group mb-2">
+                        <br>
+                        <p class="lead">Plantita de Sol con hojas, en maceta azul rey.</p>
+                        <a id="precio" data-toggle="tooltip" title="$320">Ver precio</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="col-6 col-sm-4">
+                <div class="card border-primary">
+                <img
+                src="planta4.jpg"
+                class="card-img-top"
+                alt="..."
+                />
+                  <div class="card-header">Espatifilo</div>
+                  <form>
+                    <div class="col-auto">
+                      <br>
+                        <p class="lead">Paquete de macetas combinables colores blanco y gris.</p>
+                      <div class="input-group mb-2">
+                        <a id="precio" data-toggle="tooltip" title="$500">Ver precio</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <br><br><br>
+          <footer id="footer" name="footer" class="bg-light text-center text-lg-start">
+            <div class="text-center p-3" style="background-color: #d4c0c1">
+              
+              <a id="descarga"  href="">Descarga nuestra App ☺</a>
+            </div>
+            <!-- Copyright -->
+          </footer>
+
+          <script type="text/javascript">
+        
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        });
+    
+            
+            </script>
+
+      
+    </body>
+
+</html>
